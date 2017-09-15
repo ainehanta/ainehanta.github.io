@@ -1,0 +1,18 @@
+---
+title: Makoto Uju's Portfolio
+---
+#content
+  .hero.is-fullheight
+
+    .hero-body
+      .container.has-text-left
+        h2.subtitle.is-size-3 I am
+        h1.title.is-size-1 Makoto Uju
+
+    .hero-foot
+      = partial :nav, locals: { nav_active: :top }
+
+javascript:
+  new Vue({
+    el: '#content'
+  });

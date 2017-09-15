@@ -1,0 +1,11 @@
+nav.tabs.is-boxed.is-fullwidth
+  .container
+    ul
+      li class = ("is-active" if nav_active == :top)
+        = link_to 'Top', '/'
+      li class = ("is-active" if nav_active == :works)
+        = link_to 'Works', '/works'
+      li
+        = link_to 'https://github.com/ainehanta', target: :_blank do
+          icon.i-github name="github" scale="1.3"
+          span Github

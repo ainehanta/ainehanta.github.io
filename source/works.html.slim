@@ -1,0 +1,52 @@
+---
+title: Works - Makoto Uju
+---
+#content
+  .hero.is-fullheight
+
+    .hero-body
+      .container
+        carousel(:navigation-enabled="true"
+                 :autoplay="true"
+                 :autoplay-timeout="10000"
+                 :per-page="1"
+                 :loop="true"
+                 :pagination-padding="1"
+                 :pagination-size="5"
+                 :navigation-prev-label="'←'"
+                 :navigation-next-label="'→'")
+
+          slide = partial './works/fountain'
+          slide = partial './works/wifi-ship'
+          slide = partial './works/ujyu-net'
+          slide = partial './works/iweee-site'
+          slide = partial './works/paperi'
+          slide = partial './works/the-time'
+          slide = partial './works/tikka'
+
+    .hero-foot
+      = partial :nav, locals: { nav_active: :works }
+
+javascript:
+  new Vue({
+    el: '#content'
+  });
+
+css:
+
+  .piece-img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .VueCarousel-slide {
+    position: relative;
+    font-size: 24px;
+    text-align: center;
+    min-height: 70vh;
+  }
+
+  .keywords span {
+    margin-left: 0.5rem;
+  }
