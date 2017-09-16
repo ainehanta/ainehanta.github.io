@@ -7,8 +7,9 @@ html
 
     title = current_page.data.title || "Middleman"
 
-    = javascript_include_tag webpack_asset_path "site.js"
     = stylesheet_link_tag webpack_asset_path "site.scss"
 
   body class="#{page_classes}"
     = yield
+
+  = javascript_include_tag webpack_asset_path "site.js"
