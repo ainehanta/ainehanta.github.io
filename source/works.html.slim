@@ -70,6 +70,24 @@ css:
     align-items: center;
   }
 
+  .piece-img img {
+    position:relative;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  }
+
+  .piece-img img:before, .piece-img img:after
+  {
+    content:"";
+    position:absolute;
+    z-index:-1;
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:50%;
+    bottom:0;
+    left:10px;
+    right:10px;
+    border-radius:100px / 10px;
+  }
+
   .VueCarousel-slide {
     min-height: 70vh;
     display: flex;
