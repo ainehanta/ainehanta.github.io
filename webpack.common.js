@@ -101,9 +101,9 @@ module.exports = {
     }),
     new BrowserSyncPlugin(
       {
-        host: 'localhost',
+        host: '0.0.0.0',
         port: 3000,
-        proxy: 'http://localhost:4567/'
+        proxy: 'http://0.0.0.0:4567/'
       },
       {
         reloadDelay: 2000
