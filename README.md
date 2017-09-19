@@ -1,5 +1,32 @@
 ![bildschirmfoto 2017-03-29 um 17 45 17](https://cloud.githubusercontent.com/assets/115103/24463667/b044aebc-14a7-11e7-9d3f-7640c9b4c9af.png)
 
+Makoto Uju's portfolio site
+===========================
+
+based "Middleman 4 + webpack 2" template.
+
+## Get started
+
+```
+git clone https://github.com/ainehanta/ainehanta.github.io
+cd ainehanta.github.io
+bundle install --apth vendor/bundle
+yarn install
+```
+
+## development
+
+```
+bundle exec middleman s
+```
+
+## deploy
+
+```
+bundle exec rake publish
+```
+
+
 Middleman 4 + Webpack 2
 =======================
 
@@ -25,22 +52,22 @@ A [middleman v4](https://middlemanapp.com/) preconfigured to use the [external p
 (optional). Create yourself a `.ruby-version` and `.ruby-gemset`-file to not mess up your environment. I'd recommend to use [rbenv](https://github.com/rbenv/rbenv) to manage that environment. This has been tested with ruby version `2.3.3` and a gemset named `middleman-webpack`.
 
 1. `gem install middleman`
-2. Start a new middleman-project using 
+2. Start a new middleman-project using
 
        $ middleman init my_new_site -T toadle/middleman-webpack
 
 2b. `middleman` will run `bundle install` for you. So wait.
-3. Run `npm install`. Wait. 
+3. Run `npm install`. Wait.
 4. Run `middleman s`.
 5. You should be able to open the page at `http://localhost:3000`.
-6. You can create a production-build by running `middleman build`. 
-7. Run tests by `rake` or `rspec`. 
+6. You can create a production-build by running `middleman build`.
+7. Run tests by `rake` or `rspec`.
 
 ## How does it work
 
 - Uses `middleman`'s external pipeline to generate assets. Configuration is in the two `environment`-files `development.rb` and `production.rb`
 - Runs `webpack` as it's external pipeline, as configured in `package.json`.
-- `webpack` uses the the `webpack.config.js` as it's configuration. 
+- `webpack` uses the the `webpack.config.js` as it's configuration.
 - When run as `middleman s` in `development` it'll start `middleman`, `middleman-livereload`, `webpack` and [BrowserSync](https://www.browsersync.io/). So reloading of templates and JS/CSS-changes should be reflected without manual reloads.
-- BrowserSync is configured to proxy the middleman-server from `localhost:4567` to `localhost:3000` to inject itself. 
+- BrowserSync is configured to proxy the middleman-server from `localhost:4567` to `localhost:3000` to inject itself.
 - Stuff `webpack` does is put into `.webpack_build` which `middleman` serves together with it's own files.
