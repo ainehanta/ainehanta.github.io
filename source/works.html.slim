@@ -15,6 +15,7 @@ title: Works - Makoto Uju
                  :navigation-prev-label="'←'"
                  :navigation-next-label="'→'")
 
+          slide = partial './works/iweee-site-v2'
           slide = partial './works/fountain'
           slide = partial './works/tea-cooler'
           slide = partial './works/wifi-ship'
@@ -33,6 +34,7 @@ title: Works - Makoto Uju
       = partial :nav, locals: { nav_active: :works }
 
   .works v-show="isMobile"
+    = partial './works/iweee-site-v2'
     = partial './works/fountain'
     = partial './works/tea-cooler'
     = partial './works/wifi-ship'
